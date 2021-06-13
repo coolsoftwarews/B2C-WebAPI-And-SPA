@@ -7,6 +7,7 @@ namespace WebApi.Models
 {
     public class dtoUser
     {
+        public string ObjectIdentifier { get; set; }
         public string Email { get; set; }
 
         public string FirstName { get; set; }

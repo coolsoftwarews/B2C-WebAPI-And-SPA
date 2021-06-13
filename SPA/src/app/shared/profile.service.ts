@@ -15,7 +15,7 @@ export class ProfileService {
   constructor(
     private http: HttpClient
     ) {
-    this.profileUrl = environment.urlAddress + '/api/profile';
+    this.profileUrl = environment.b2cConfig.resources.uri + '/api/profile';
   }
 
   getLoggedInProfile() : Observable<IUser>

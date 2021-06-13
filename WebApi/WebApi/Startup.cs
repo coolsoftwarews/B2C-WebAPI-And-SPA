@@ -36,8 +36,6 @@ namespace WebApi
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                   .AddMicrosoftIdentityWebApi(Configuration, "AzureAdB2C");
 
-            services.AddAuthorization();
-
             services.AddControllers();
 
             // Allowing CORS for all domains and methods for the purpose of the sample
@@ -58,20 +56,14 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseSwagger();
-            //    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
-            //}
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
+            }
 
             app.UseHsts();
-
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "RDP Actual Capture Monthly  - V01");
-            });
 
             app.UseCors("default");
             app.UseHttpsRedirection();
