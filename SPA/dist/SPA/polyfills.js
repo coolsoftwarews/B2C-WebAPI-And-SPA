@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\TestProjectStuff\Azure-B2C-Auth\SPA\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\CSWS-Git\B2C-WebAPI-And-SPA\SPA\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
