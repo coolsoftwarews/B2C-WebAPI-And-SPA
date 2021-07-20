@@ -9,7 +9,7 @@ export const environment = {
     names: {
         signUpSignIn: "B2C_1_SignIn_SignUp",
         forgotPassword: "B2C_1_Password_Reset",
-        editProfile: "B2C_1_Profile_Editing"
+        editProfile: "B2C_1_Profile_Editing"zz
     },
     authorities: {
         signUpSignIn: {
